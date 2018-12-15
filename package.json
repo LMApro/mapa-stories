@@ -2,6 +2,7 @@
   "name": "mapa-stories",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://LMApro.github.com/mapa-stories",
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -12,7 +13,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "git subtree push --prefix build github gh-pages"
+    "clean": "rm -rf static asset-manifest.json favicon.ico index.html manifest.json precache-manifest.* service-worker.js",
+    "clean-deploy": "npm run clean && npm run build && cp -R build/* ./",
+    "deploy": "npm run clean && cp -R build/* ./"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -22,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
