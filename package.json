@@ -59,8 +59,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "clean": "rm -rf static asset-manifest.json favicon.ico index.html manifest.json precache-manifest.* service-worker.js",
-    "clean-deploy": "npm run clean && npm run build && cp -R build/* ./",
-    "deploy": "npm run clean && cp -R build/* ./"
+    "clean-deploy": "npm run clean && npm run build && cp -R build/* ./ && git push github master",
+    "deploy": "npm run clean && cp -R build/* ./ && git push github master"
   },
   "eslintConfig": {
     "extends": "react-app"
