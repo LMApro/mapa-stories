@@ -3,28 +3,14 @@ import Gallery from './Gallery';
 import './App.css';
 
 class App extends Component {
-  state = {
-    photos: []
-  }
-
-  componentDidMount() {
-    this.getPhotos();
-  }
-
-  getPhotos() {
-
-  }
-
-
   render() {
-    const {photos} = this.state;
     return (
       <div className="App">
         <header className="App-header">
           hello
         </header>
         <main>
-          <Gallery photos={photos} />
+          <Gallery />
         </main>
       </div>
     );
