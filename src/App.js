@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Gallery from './Gallery';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          hello
+          Header
         </header>
         <main>
           <Gallery />
