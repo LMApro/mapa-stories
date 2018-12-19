@@ -34,7 +34,7 @@ function masonry(grid, gridCell, gridGutter, desktopGridCol, tabletGridCol, mobi
 
 class Gallery extends React.Component {
     componentDidMount() {
-        this.arrangeImages();
+        // this.arrangeImages();
         this.listenWindowEvent();
     }
 
@@ -47,9 +47,7 @@ class Gallery extends React.Component {
         ["resize", "load"].forEach((event) => {
             window.addEventListener(event, (e) => {
                 console.log(e);
-                imagesLoaded(document.querySelector('.masonry'), () => {
-                    this.arrangeImages();
-                });
+                this.arrangeImages();
             });
         });
     }
