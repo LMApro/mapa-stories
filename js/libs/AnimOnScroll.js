@@ -162,7 +162,7 @@
 			if ( this.resizeTimeout ) {
 				clearTimeout( this.resizeTimeout );
 			}
-			this.resizeTimeout = setTimeout( delayed, 1000 );
+			this.resizeTimeout = setTimeout( delayed, 100 );
 		},
 		_checkTotalRendered : function() {
 			++this.itemsRenderedCount;
