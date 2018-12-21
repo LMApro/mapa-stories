@@ -6,7 +6,7 @@
   "scripts": {
     "start": "serve -s ./",
     "minify-css": "cleancss --level 1 -o css/styles.min.css css/default.css css/component.css",
-    "resize-img": "cd images/original && mogrify -path ../min -resize 360x -format jpg *.jpg",
+    "resize-img": "cd images/original && mogrify -path ../thumb -resize 360x -format jpg *.jpg",
     "sync-img": "node get-images",
     "build": "npm run sync-img && npm run resize-img && npm run minify-css"
   },
