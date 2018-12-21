@@ -1,0 +1,27 @@
+{
+  "name": "mapa-stories",
+  "version": "1.0.0",
+  "description": "Created by Codrops",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -s ./",
+    "minify-css": "cleancss --level 1 -o css/styles.min.css css/default.css css/component.css",
+    "resize-img": "cd images && mogrify -path min -resize 360x -format jpg *.jpg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMApro/mapa-stories.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LMApro/mapa-stories/issues"
+  },
+  "homepage": "https://github.com/LMApro/mapa-stories#readme",
+  "devDependencies": {
+    "clean-css-cli": "^4.2.1",
+    "resize-image-cli": "^1.0.1",
+    "serve": "^10.1.1"
+  }
+}
