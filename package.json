@@ -23,6 +23,7 @@
   "homepage": "https://github.com/LMApro/mapa-stories#readme",
   "devDependencies": {
     "clean-css-cli": "^4.2.1",
+    "image-size": "^0.6.3",
     "resize-image-cli": "^1.0.1",
     "serve": "^10.1.1"
   }
