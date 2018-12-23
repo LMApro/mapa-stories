@@ -1,7 +1,19 @@
 const grid = document.getElementById('grid');
 
 function getImageMinHeight(image) {
-    let imageWidth = document.getElementById('grid').clientWidth / 4 - 14;
+    let containerWidth = document.getElementById('grid').clientWidth;
+    let nbCols = 1;
+    if (containerWidth >= 481 && containerWidth <= 720) {
+        nbCols = 2;
+    }
+    if (containerWidth >= 721 && containerWidth <= 1024) {
+        nbCols = 3;
+    }
+    if (containerWidth >= 1025) {
+        nbCols = 4;
+    }
+
+    let imageWidth = containerWidth / nbCols - 14;
     return imageWidth * image.ratio + 'px';
 }
 
