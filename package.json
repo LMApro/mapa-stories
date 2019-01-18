@@ -4,7 +4,7 @@
   "description": "Created by Codrops",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s ./",
+    "start": "serve ./",
     "minify-css": "cleancss --level 1 -o css/styles.min.css css/default.css css/component.css",
     "resize-img": "cd images/original && mogrify -path ../thumb -resize 1080x -format jpg *.jpeg",
     "sync-img": "node get-images",
@@ -26,5 +26,8 @@
     "image-size": "^0.6.3",
     "resize-image-cli": "^1.0.1",
     "serve": "^10.1.1"
+  },
+  "dependencies": {
+    "pdf-write-page": "^1.2.0"
   }
 }

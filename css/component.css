@@ -1,8 +1,10 @@
 .grid {
 	max-width: 100%;
 	list-style: none;
-	margin: 30px auto;
+	margin: px auto;
 	padding: 0;
+	z-index: 2;
+
 }
 
 .grid li {
@@ -11,12 +13,17 @@
 	padding: 7px;
 	width: 25%;
 	opacity: 0;
+
+}
+.grid li:first-child {
+	padding-top: 0;
 }
 
 .grid li.shown,
 .no-js .grid li,
 .no-cssanimations .grid li {
 	opacity: 1;
+
 }
 
 .grid li a,
@@ -42,6 +49,29 @@
 	transform: rotateX(-150deg);
 	-webkit-animation: flip .8s ease-in-out forwards;
 	animation: flip .8s ease-in-out forwards;
+}
+
+#header {
+	background-image: url('../images/bg03.jpg');
+	background-size: cover;
+	margin-bottom: -10px;
+	position: relative;
+}
+
+#clock {
+	font-size: 1.5em;
+	z-index: 2;
+	text-align: right;
+	color: rgba(32, 32, 32, 0.5);
+}
+
+#note {
+	font-size: 0.8em;
+	margin: 0;
+	color: rgba(32, 32, 32, 0.4);
+	padding: 0;
+	text-align: right;
+	font-style: italic;
 }
 
 @-webkit-keyframes flip {
