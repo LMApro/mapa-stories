@@ -79,3 +79,25 @@ new AnimOnScroll(document.getElementById('grid'), {
     maxDuration: 0.7,
     viewportFactor: 0.2
 });
+
+function initVNDA() {
+    window.vnda =
+        window.vnda ||
+        function() {
+            (window.vnda.q = window.vnda.q || []).push(arguments);
+        };
+    window.vnda.l = +new Date();
+}
+initVNDA();
+function handleLoadVNDA() {
+    window.vnda('create', 'Dolfin', 'auto', 'Dolfin-tracker');
+    window.vnda('Dolfin-tracker.send', 'pageview');
+    window.vnda(
+        'Dolfin-tracker.send',
+        'event',
+        'Test',
+        'mapa'
+    );
+};
+
+
