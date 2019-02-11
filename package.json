@@ -6,7 +6,7 @@
   "scripts": {
     "start": "serve ./",
     "minify-css": "cleancss --level 1 -o css/styles.min.css css/default.css css/component.css",
-    "resize-img": "cd images/original && mogrify -path ../thumb -resize 1080x -format jpg *.jpeg",
+    "resize-img": "cd images/original && mogrify -path ../thumb -resize 1080x -format jpg *.jpg",
     "sync-img": "node get-images",
     "build": "npm run sync-img && npm run resize-img && npm run minify-css"
   },
@@ -28,6 +28,7 @@
     "serve": "^10.1.1"
   },
   "dependencies": {
-    "pdf-write-page": "^1.2.0"
+    "pdf-write-page": "^1.2.0",
+    "pdf2pic": "^1.2.6"
   }
 }
