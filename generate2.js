@@ -21,21 +21,19 @@ const bodau = function(str) {
 	);
 	return str;
 }
+
 const writeOptions = {
-    size: 16,
+    size: 20,
     colorspace: 'rgb',
-    color: 0x08b195,
-    fontPath: './UVNBenXuan.ttf'
+    color: 0x079b83,
+    fontPath: './UVNKeChuyen2.ttf'
 };
+
 const name = 'Chị Huyền';
-const guests = [
+const guests = [   
     {
-        name: 'Chị Huyền',
-        role: 'Chị'
-    },
-    {
-        name: 'Chị Huyền Hồ',
-        role: 'Bạn & Người Thương'
+        name: 'Chị Lan',
+        role: 'Chị & Nam'
     },
 ];
 const refinedGuests = guests.map(guest => ({
@@ -50,32 +48,32 @@ function getNameOffset(placeholderOffset, placeholderLength, name, scaleFactor) 
 function generateSinglePdf(guest) {
     pdf({ in: 'file.pdf', out: `online-wedding-card/${guest.filename}.pdf`, pageNumber: 0 })
         .cfg(writeOptions)
-        .write(getNameOffset(457, 150, guest.name, 8.33), 52, guest.name)
+        .write(getNameOffset(457, 150, guest.name, 10), 52, guest.name)
         .page(1)
-        .write(getNameOffset(446, 170, guest.role, 7.4), 491, guest.role)
+        .write(getNameOffset(446, 170, guest.role, 10), 491, guest.role)
         .page(2)
-        .write(getNameOffset(446, 170, guest.role, 7.4), 491, guest.role)
+        .write(getNameOffset(446, 170, guest.role, 10), 491, guest.role)
         .end();
-    convertPDFToImg(guest)
+    // convertPDFToImg(guest)
 }
 
-function convertPDFToImg(guest) {
-    let converter = new PDF2Pic({
-    density: 100,           // output pixels per inch
-    savename: "untitled",   // output file name
-    savedir: "./wedding-images",    // output file location
-    format: "png",          // output file format
-    size: 600               // output size in pixels
-    })
+// function convertPDFToImg(guest) {
+//     let converter = new PDF2Pic({
+//     density: 100,           // output pixels per inch
+//     savename: "untitled",   // output file name
+//     savedir: "./wedding-images",    // output file location
+//     format: "png",          // output file format
+//     size: 600               // output size in pixels
+//     })
  
-    // by default the first page of the pdf will be converted
-    // to image
-    converter.convert(`./online-wedding-card/${guest.filename}.pdf`)
-    .then(resolve => {
-        console.log("image converted successfully")
-    })
+//     // by default the first page of the pdf will be converted
+//     // to image
+//     converter.convert(`./online-wedding-card/${guest.filename}.pdf`)
+//     .then(resolve => {
+//         console.log("image converted successfully")
+//     })
  
-}
+// }
 
 function generateMultiplePdf(guests) {
     for (let i = 0; i < guests.length; i++) {

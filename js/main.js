@@ -38,7 +38,7 @@ function getImages() {
 function calculateClock() {
     let now = new Date();
     let ceremony = new Date(2019, 2, 14, 18, 30, 0, 0);
-    let diffDay = ceremony.getTime() - now.getTime();
+    let diffDay = Math.abs(ceremony.getTime() - now.getTime());
     let nbDays = Math.floor(diffDay / ONE_DAY_MS);
     let diffHour = diffDay - nbDays * ONE_DAY_MS;
     let nbHours = Math.floor(diffHour / ONE_HOUR_MS);
