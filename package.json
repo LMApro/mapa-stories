@@ -25,7 +25,7 @@
     "clean-css-cli": "^4.2.1",
     "image-size": "^0.6.3",
     "resize-image-cli": "^1.0.1",
-    "serve": "^10.1.1"
+    "serve": "^10.1.2"
   },
   "dependencies": {
     "pdf-write-page": "^1.2.0",
